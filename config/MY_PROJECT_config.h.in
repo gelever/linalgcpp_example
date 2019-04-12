@@ -1,0 +1,7 @@
+#ifndef MY_PROJECT_CONFIG_H
+#define MY_PROJECT_CONFIG_H
+
+// Place cmake defined variables here
+//#cmakedefine01 MY_PROJECT_CONFIG_VAR
+
+#endif //MY_PROJECT_CONFIG_H

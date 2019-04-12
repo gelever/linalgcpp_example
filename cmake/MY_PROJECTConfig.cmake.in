@@ -1,0 +1,14 @@
+get_filename_component(MY_PROJECT_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include(CMakeFindDependencyMacro)
+
+list(APPEND CMAKE_MODULE_PATH ${MY_PROJECT_CMAKE_DIR})
+
+find_package(linalgcpp REQUIRED)
+
+LIST(REMOVE_AT CMAKE_MODULE_PATH -1)
+
+if(NOT TARGET MY_PROJECT::MY_PROJECT)
+    include("${MY_PROJECT_CMAKE_DIR}/MY_PROJECTTargets.cmake")
+endif()
+
+set(MY_PROJECT_LIBRARIES MY_PROJECT::MY_PROJECT)
